@@ -12,11 +12,21 @@ extraJavaModuleInfo {
     module("com.google.guava:guava", "com.google.guava.guava") {
         exports("com.google.common.primitives")
         exports("com.google.common.collect")
+        requires("com.google.code.findbugs.jsr305")
     }
+    module("com.google.code.findbugs:jsr305", "com.google.code.findbugs.jsr305")
 
     module("ch.qos.logback:logback-classic", "ch.qos.logback.logbackclassic")
     module("ch.qos.logback:logback-core", "ch.qos.logback.logbackcore")
     module("org.apache.commons:commons-math", "org.apache.commons.commonsmath")
     module("org.hamcrest:hamcrest-core", "org.hamcrest.hamcrestcore")
     module("commons-io:commons-io", "commonsio.commonsio")
+
+    module("org.reflections:reflections", "org.reflections.reflections") {
+        requires("org.slf4j")
+        requires("org.javassist.javassist")
+        requires("com.google.code.findbugs.jsr305")
+        exports("org.reflections")
+    }
+    module("org.javassist:javassist", "org.javassist.javassist")
 }
