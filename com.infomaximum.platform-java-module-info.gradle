@@ -12,6 +12,7 @@ extraJavaModuleInfo {
     module("com.google.guava:guava", "com.google.guava.guava") {
         exports("com.google.common.primitives")
         exports("com.google.common.collect")
+        exports("com.google.common.base")
         requires("com.google.code.findbugs.jsr305")
     }
     module("com.google.code.findbugs:jsr305", "com.google.code.findbugs.jsr305")
@@ -27,6 +28,24 @@ extraJavaModuleInfo {
         requires("org.javassist.javassist")
         requires("com.google.code.findbugs.jsr305")
         exports("org.reflections")
+        exports("org.reflections.scanners")
     }
     module("org.javassist:javassist", "org.javassist.javassist")
+
+    module("com.graphql-java:graphql-java", "com.graphqljava.graphqljava") {
+        requires("org.slf4j")
+        requires("com.graphql-java.java-dataloader")
+        exports("graphql")
+        exports("graphql.language")
+        exports("graphql.schema")
+        exports("graphql.execution")
+        exports("graphql.execution.instrumentation")
+        exports("graphql.execution.instrumentation.parameters")
+        exports("graphql.execution.preparsed")
+        exports("graphql.introspection")
+    }
+    module("com.graphql-java:java-dataloader", "com.graphql-java.java-dataloader")
+
+    module("javax.servlet:javax.servlet-api", "javax.servlet.javax.servlet-api") {
+    }
 }
