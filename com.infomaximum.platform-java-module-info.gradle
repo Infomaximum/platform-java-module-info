@@ -34,7 +34,7 @@ extraJavaModuleInfo {
 
     module("com.graphql-java:graphql-java", "com.graphqljava.graphqljava") {
         requires("org.slf4j")
-        requires("com.graphql-java.java-dataloader")
+        requires("com.graphqljava.javadataloader")
         exports("graphql")
         exports("graphql.language")
         exports("graphql.schema")
@@ -44,8 +44,11 @@ extraJavaModuleInfo {
         exports("graphql.execution.preparsed")
         exports("graphql.introspection")
     }
-    module("com.graphql-java:java-dataloader", "com.graphql-java.java-dataloader")
+    module("com.graphql-java:java-dataloader", "com.graphqljava.javadataloader")
 
-    module("javax.servlet:javax.servlet-api", "javax.servlet.javax.servlet-api") {
-    }
+
+    automaticModule("org.eclipse.jetty.toolchain:jetty-schemas", "org.eclipse.jetty.toolchain.jettyschemas")
+    automaticModule("org.mortbay.jasper:apache-jsp", "org.mortbay.jasper.apachejsp")
+    automaticModule("org.mortbay.jasper:apache-el", "org.mortbay.jasper.apacheel")
+    automaticModule("org.eclipse.jdt:ecj", "org.eclipse.jdt.ecj")
 }
