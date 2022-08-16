@@ -10,10 +10,12 @@ extraJavaModuleInfo {
     }
 
     module("com.google.guava:guava", "com.google.guava.guava") {
+        requires("com.google.code.findbugs.jsr305")
         exports("com.google.common.primitives")
         exports("com.google.common.collect")
         exports("com.google.common.base")
-        requires("com.google.code.findbugs.jsr305")
+        exports("com.google.common.net")
+        exports("com.google.common.escape")
     }
     module("com.google.code.findbugs:jsr305", "com.google.code.findbugs.jsr305")
 
@@ -43,6 +45,7 @@ extraJavaModuleInfo {
         exports("graphql.execution.instrumentation.parameters")
         exports("graphql.execution.preparsed")
         exports("graphql.introspection")
+        exports("graphql.execution.reactive")
     }
     module("com.graphql-java:java-dataloader", "com.graphqljava.javadataloader")
 
@@ -51,4 +54,17 @@ extraJavaModuleInfo {
     automaticModule("org.mortbay.jasper:apache-jsp", "org.mortbay.jasper.apachejsp")
     automaticModule("org.mortbay.jasper:apache-el", "org.mortbay.jasper.apacheel")
     automaticModule("org.eclipse.jdt:ecj", "org.eclipse.jdt.ecj")
+
+    module("commons-fileupload:commons-fileupload", "commonsfileupload.commonsfileupload") {
+        requires("commonsio.commonsio")
+        exports("org.apache.commons.fileupload")
+    }
+    module("commons-io:commons-io", "commonsio.commonsio") {
+        exports("org.apache.commons.io")
+    }
+
+    module("org.apache.commons:commons-lang3", "org.apache.commons.commonslang3") {
+        exports("org.apache.commons.lang3")
+        exports("org.apache.commons.lang3.exception")
+    }
 }
