@@ -10,7 +10,6 @@ extraJavaModuleInfo {
     }
 
     module("com.google.guava:guava", "com.google.guava.guava") {
-        requires("com.google.code.findbugs.jsr305")
         requires("com.google.guava.failureaccess")
         requires("com.google.guava.listenablefuture")
         requires("com.google.j2objc.j2objcannotations")
@@ -27,9 +26,6 @@ extraJavaModuleInfo {
     module("com.google.guava:failureaccess", "com.google.guava.failureaccess")
     module("com.google.guava:listenablefuture", "com.google.guava.listenablefuture")
     module("com.google.j2objc:j2objc-annotations", "com.google.j2objc.j2objcannotations")
-    module("com.google.code.findbugs:jsr305", "com.google.code.findbugs.jsr305") {
-        exports("javax.annotation")
-    }
 
     module("ch.qos.logback:logback-classic", "ch.qos.logback.logbackclassic") {
         requires("ch.qos.logback.logbackcore")
@@ -47,7 +43,6 @@ extraJavaModuleInfo {
     module("org.reflections:reflections", "org.reflections.reflections") {
         requires("org.slf4j")
         requires("org.javassist.javassist")
-        requires("com.google.code.findbugs.jsr305")
         exports("org.reflections")
         exports("org.reflections.scanners")
     }
