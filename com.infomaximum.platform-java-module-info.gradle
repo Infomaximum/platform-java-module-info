@@ -11,6 +11,9 @@ extraJavaModuleInfo {
 
     module("com.google.guava:guava", "com.google.guava.guava") {
         requires("com.google.code.findbugs.jsr305")
+        requires("com.google.guava.failureaccess")
+        requires("com.google.guava.listenablefuture")
+        requires("com.google.j2objc.j2objcannotations")
         exports("com.google.common.primitives")
         exports("com.google.common.collect")
         exports("com.google.common.base")
@@ -19,7 +22,11 @@ extraJavaModuleInfo {
         exports("com.google.common.io")
         exports("com.google.common.cache")
         exports("com.google.common.hash")
+        exports("com.google.common.util.concurrent")
     }
+    module("com.google.guava:failureaccess", "com.google.guava.failureaccess")
+    module("com.google.guava:listenablefuture", "com.google.guava.listenablefuture")
+    module("com.google.j2objc:j2objc-annotations", "com.google.j2objc.j2objcannotations")
     module("com.google.code.findbugs:jsr305", "com.google.code.findbugs.jsr305") {
         exports("javax.annotation")
     }
