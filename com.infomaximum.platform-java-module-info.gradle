@@ -53,7 +53,9 @@ extraJavaModuleInfo {
     }
     module("org.antlr:antlr4-runtime", "org.antlr.antlr4.runtime")
     module("com.graphql-java:java-dataloader", "com.graphqljava.javadataloader")
-    module("org.reactivestreams:reactive-streams", "org.reactivestreams.reactivestreams")
+    module("org.reactivestreams:reactive-streams", "org.reactivestreams.reactivestreams") {
+        exports("org.reactivestreams")
+    }
 
 
     automaticModule("org.eclipse.jetty.toolchain:jetty-schemas", "org.eclipse.jetty.toolchain.jettyschemas")
