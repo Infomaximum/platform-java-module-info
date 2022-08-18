@@ -3,16 +3,16 @@ extraJavaModuleInfo {
         exports("org.rocksdb")
         exports("org.rocksdb.util")
     }
-    module("net.minidev:accessors-smart", "net.minidev.accessorssmart")
+
     module("net.minidev:json-smart", "net.minidev.jsonsmart") {
+        requires("net.minidev.accessorssmart")
         exports("net.minidev.json")
         exports("net.minidev.json.parser")
     }
+    module("net.minidev:accessors-smart", "net.minidev.accessorssmart")
 
     module("com.google.guava:guava", "com.google.guava.guava") {
-        requires("com.google.guava.failureaccess")
-        requires("com.google.guava.listenablefuture")
-        requires("com.google.j2objc.j2objcannotations")
+        requires("java.logging")
         exports("com.google.common.primitives")
         exports("com.google.common.collect")
         exports("com.google.common.base")
@@ -23,9 +23,6 @@ extraJavaModuleInfo {
         exports("com.google.common.hash")
         exports("com.google.common.util.concurrent")
     }
-    module("com.google.guava:failureaccess", "com.google.guava.failureaccess")
-    module("com.google.guava:listenablefuture", "com.google.guava.listenablefuture")
-    module("com.google.j2objc:j2objc-annotations", "com.google.j2objc.j2objcannotations")
 
     module("ch.qos.logback:logback-classic", "ch.qos.logback.logbackclassic") {
         requires("ch.qos.logback.logbackcore")
