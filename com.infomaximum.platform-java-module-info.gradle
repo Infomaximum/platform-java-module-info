@@ -59,7 +59,7 @@ extraJavaModuleInfo {
 
 
     automaticModule("org.eclipse.jetty.toolchain:jetty-schemas", "org.eclipse.jetty.toolchain.jettyschemas")
-    automaticModule("org.mortbay.jasper:apache-jsp", "org.mortbay.jasper.apachejsp")
+    automaticModule("org.mortbay.jasper:apache-jsp", "org.mortbay.apache.jasper")
     automaticModule("org.mortbay.jasper:apache-el", "org.mortbay.jasper.apacheel")
     automaticModule("org.eclipse.jdt:ecj", "org.eclipse.jdt.ecj")
 
