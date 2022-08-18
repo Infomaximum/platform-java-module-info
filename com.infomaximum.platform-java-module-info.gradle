@@ -47,7 +47,9 @@ extraJavaModuleInfo {
 
     module("com.graphql-java:graphql-java", "com.graphqljava.graphqljava") {
         requires("org.slf4j")
+        requires("org.antlr.antlr4.runtime")
         requires("com.graphqljava.javadataloader")
+        requires("org.reactivestreams.reactivestreams")
         exports("graphql")
         exports("graphql.language")
         exports("graphql.schema")
@@ -58,7 +60,9 @@ extraJavaModuleInfo {
         exports("graphql.introspection")
         exports("graphql.execution.reactive")
     }
+    module("org.antlr:antlr4-runtime", "org.antlr.antlr4.runtime")
     module("com.graphql-java:java-dataloader", "com.graphqljava.javadataloader")
+    module("org.reactivestreams:reactive-streams", "org.reactivestreams.reactivestreams")
 
 
     automaticModule("org.eclipse.jetty.toolchain:jetty-schemas", "org.eclipse.jetty.toolchain.jettyschemas")
