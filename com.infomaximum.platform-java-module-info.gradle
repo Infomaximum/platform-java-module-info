@@ -24,15 +24,6 @@ extraJavaModuleInfo {
         exports("com.google.common.util.concurrent")
     }
 
-    module("ch.qos.logback:logback-classic", "ch.qos.logback.logbackclassic") {
-        requires("ch.qos.logback.logbackcore")
-        exports("ch.qos.logback.classic.pattern")
-        exports("ch.qos.logback.classic.spi")
-    }
-    module("ch.qos.logback:logback-core", "ch.qos.logback.logbackcore") {
-        exports("ch.qos.logback.core")
-        exports("ch.qos.logback.core.pattern")
-    }
     module("org.apache.commons:commons-math", "org.apache.commons.commonsmath")
     module("org.hamcrest:hamcrest-core", "org.hamcrest.hamcrestcore")
     module("commons-io:commons-io", "commonsio.commonsio")
