@@ -28,12 +28,6 @@ extraJavaModuleInfo {
     module("org.hamcrest:hamcrest-core", "org.hamcrest.hamcrestcore")
     module("commons-io:commons-io", "commonsio.commonsio")
 
-    module("org.reflections:reflections", "org.reflections.reflections") {
-        requires("org.slf4j")
-        requires("org.javassist.javassist")
-        exports("org.reflections")
-        exports("org.reflections.scanners")
-    }
     module("org.javassist:javassist", "org.javassist.javassist")
 
     module("com.graphql-java:graphql-java", "com.graphqljava.graphqljava") {
