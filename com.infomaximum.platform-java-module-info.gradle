@@ -28,8 +28,6 @@ extraJavaModuleInfo {
     module("org.hamcrest:hamcrest-core", "org.hamcrest.hamcrestcore")
     module("commons-io:commons-io", "commonsio.commonsio")
 
-    module("org.javassist:javassist", "org.javassist.javassist")
-
     module("com.graphql-java:graphql-java", "com.graphqljava.graphqljava") {
         requires("org.slf4j")
         requires("org.antlr.antlr4.runtime")
