@@ -30,9 +30,8 @@ extraJavaModuleInfo {
 
     module("com.graphql-java:graphql-java", "com.graphqljava") {
         requires("org.slf4j")
-        requires("org.antlr.antlr4.runtime")
         requires("org.dataloader")
-        requires("org.reactivestreams.reactivestreams")
+        requires("org.reactivestreams")
         exports("graphql")
         exports("graphql.language")
         exports("graphql.schema")
