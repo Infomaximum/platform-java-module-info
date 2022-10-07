@@ -32,6 +32,7 @@ extraJavaModuleInfo {
         requires("org.slf4j")
         requires("org.dataloader")
         requires("org.reactivestreams")
+        requires("java.logging")
         exports("graphql")
         exports("graphql.language")
         exports("graphql.schema")
