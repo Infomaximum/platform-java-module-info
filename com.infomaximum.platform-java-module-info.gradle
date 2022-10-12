@@ -22,6 +22,7 @@ extraJavaModuleInfo {
         exports("com.google.common.cache")
         exports("com.google.common.hash")
         exports("com.google.common.util.concurrent")
+        exports("com.google.common.graph")
     }
 
     module("org.apache.commons:commons-math", "org.apache.commons.commonsmath")
