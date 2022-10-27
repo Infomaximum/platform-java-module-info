@@ -11,7 +11,7 @@ extraJavaModuleInfo {
     }
     module("net.minidev:accessors-smart", "net.minidev.accessorssmart")
 
-    module("com.google.guava:guava", "com.google.guava.guava") {
+    module("com.google.guava:guava", "com.google.common") {
         requires("java.logging")
         exports("com.google.common.primitives")
         exports("com.google.common.collect")
